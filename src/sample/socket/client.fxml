@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3c414a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.socket.client">
+   <children>
+      <Label layoutX="15.0" layoutY="32.0" text="Sender" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="16.0" text="Destnation IP" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ipField" alignment="CENTER" layoutX="323.0" layoutY="10.0" promptText="127.0.0.1" style="-fx-background-color: white; -fx-opacity: 80%; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 2;" text="127.0.0.1">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="499.0" layoutY="11.0" onAction="#connect" prefHeight="24.0" prefWidth="89.0" style="-fx-background-color: #12e41c; -fx-background-radius: 15;" text="Connect">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="textArea" layoutX="14.0" layoutY="100.0" prefHeight="243.0" prefWidth="568.0" style="-fx-background-color: white; -fx-opacity: 80%; -fx-border-color: black; -fx-border-width: 2;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextArea>
+      <JFXButton layoutX="122.0" layoutY="360.0" onAction="#submit" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="Send ">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="messageBox" checkedColor="#a86e6e" layoutX="15.0" layoutY="365.0" text="Files" textFill="WHITE" unCheckedColor="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXCheckBox>
+      <TextField fx:id="fileHint" alignment="CENTER" layoutX="255.0" layoutY="359.0" prefHeight="27.0" prefWidth="330.0" promptText="Hint: example" style="-fx-background-color: white; -fx-opacity: 80%; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 2;">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="231.0" layoutY="74.0" prefHeight="20.0" prefWidth="121.0" text="Connection status:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="connectionStatus" alignment="CENTER" layoutX="377.0" layoutY="74.0" prefHeight="20.0" prefWidth="121.0" text="NULL" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="499.0" layoutY="45.0" onAction="#disconnect" style="-fx-background-color: red; -fx-background-radius: 15;" text="Disconnect" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="232.0" layoutY="49.0" text="Your name." textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="myName" alignment="CENTER" layoutX="323.0" layoutY="43.0" promptText="name" style="-fx-background-color: white; -fx-opacity: 80%; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 2;" text="user">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="14.0" layoutY="3.0" onAction="#back" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="Back">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="82.0" layoutY="3.0" onAction="#newPoint" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="New">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

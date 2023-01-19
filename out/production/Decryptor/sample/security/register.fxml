@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="392.0" prefWidth="339.0" style="-fx-background-color: #3c414a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.security.security">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/banner.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="101.0" layoutY="81.0" prefHeight="45.0" prefWidth="155.0" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="175.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="247.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginStatus" alignment="CENTER" contentDisplay="CENTER" layoutY="135.0" prefHeight="31.0" prefWidth="347.0" textFill="RED">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="40.0" layoutY="323.0" mnemonicParsing="false" onAction="#submitRegister" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #3c414a; -fx-background-radius: 20; -fx-cursor: pointer; -fx-border-color: #2586ff; -fx-border-radius: 20; -fx-border-width: 3;" text="submit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="187.0" layoutY="323.0" mnemonicParsing="false" onAction="#mainLogin" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #3c414a; -fx-background-radius: 20; -fx-cursor: pointer; -fx-border-color: #258f77; -fx-border-radius: 20; -fx-border-width: 3;" text="login" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userField" layoutX="31.0" layoutY="201.0" prefHeight="31.0" prefWidth="295.0" promptText="Username" style="-fx-background-color: c9c9c9; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 1; -fx-background-radius: 10;" />
+      <PasswordField fx:id="passField" layoutX="31.0" layoutY="275.0" prefHeight="31.0" prefWidth="295.0" promptText="Password" style="-fx-background-color: c9c9c9; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 1; -fx-background-radius: 10;" />
+   </children>
+</AnchorPane>

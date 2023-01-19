@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="404.0" prefWidth="413.0" style="-fx-background-color: #3c414a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.security.security">
+   <children>
+      <ImageView fitHeight="84.0" fitWidth="470.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/banner.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="93.0" prefHeight="38.0" prefWidth="101.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userField" layoutX="37.0" layoutY="222.0" prefHeight="23.0" prefWidth="343.0" promptText="Username" style="-fx-background-color: c9c9c9; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 1; -fx-background-radius: 10;" />
+      <Label layoutX="37.0" layoutY="196.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="267.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginStatus" alignment="CENTER" contentDisplay="CENTER" layoutY="157.0" prefHeight="31.0" prefWidth="418.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="150.0" layoutY="345.0" mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: #3c414a; -fx-background-radius: 20; -fx-cursor: pointer; -fx-border-color: #258f77; -fx-border-radius: 20; -fx-border-width: 3;" text="register" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="345.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: #3c414a; -fx-background-radius: 20; -fx-cursor: pointer; -fx-border-color: #2586ff; -fx-border-radius: 20; -fx-border-width: 3;" text="login" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="291.0" layoutY="345.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #3c414a; -fx-background-radius: 20; -fx-cursor: pointer; -fx-border-color: #971b1b; -fx-border-radius: 20; -fx-border-width: 3;" text="cancel" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passField" layoutX="37.0" layoutY="294.0" prefHeight="23.0" prefWidth="343.0" promptText="Password" style="-fx-background-color: c9c9c9; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 1; -fx-background-radius: 10;" />
+   </children>
+</AnchorPane>
