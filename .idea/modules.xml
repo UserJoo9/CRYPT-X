@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Decryptor.iml" filepath="$PROJECT_DIR$/Decryptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CRYPT-X.iml" filepath="$PROJECT_DIR$/CRYPT-X.iml" />
     </modules>
   </component>
 </project>
