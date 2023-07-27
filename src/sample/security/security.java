@@ -39,41 +39,38 @@ public class security {
     }
 
 
-
     @FXML
     void loginButton(ActionEvent event) {
         try {
-            if (userField.getText().isEmpty()) {
-                loginStatus.setText("Enter the user name !!");
-            } else if (passField.getText().isEmpty()) {
-                loginStatus.setText("Enter the password !!");
-            } else if (userField.getText().equals("youssef") && passField.getText().equals("1234")) {
-                checkLogin(event, userField.getText());
-            } else if (userField.getText().equals("mousa") && passField.getText().equals("12345")) {
-                checkLogin(event, userField.getText());
-            } else if (userField.getText().equals("moataz") && passField.getText().equals("123456")) {
-                checkLogin(event, userField.getText());
-            } else {
-              try {
-                      File b = new File("C:\\cryptxRegistration.txt");
-                      if(!b.exists()){
-                          b.createNewFile();
-                      }
-                      Scanner dd = new Scanner(b);
-//                      String userpass = dd.nextLine();
-                      String userpass=userField.getText()+":"+passField.getText();
-                      while (dd.hasNext()) {
-                          String p = dd.nextLine();
-                          if (userpass.equals(p)) {
-                              mainUserCeaser(event);
-                              JOptionPane.showMessageDialog(null,"Hello "+userField.getText());
-                          }
-                      }
-                      dd.close();
+            if (checkLogin()){
+                mainCeaser(event);
+            }else {
+                if (userField.getText().isEmpty()) {
+                    loginStatus.setText("Enter the user name !!");
+                } else if (passField.getText().isEmpty()) {
+                    loginStatus.setText("Enter the password !!");
+                } else {
+                    try {
+                        File b = new File("C:\\cryptxRegistration.txt");
+                        if (!b.exists()) {
+                            b.createNewFile();
+                        }
+                        Scanner dd = new Scanner(b);
+                        //                      String userpass = dd.nextLine();
+                        String userpass = userField.getText() + ":" + passField.getText();
+                        while (dd.hasNext()) {
+                            String p = dd.nextLine();
+                            if (userpass.equals(p)) {
+                                mainUserCeaser(event);
+                                JOptionPane.showMessageDialog(null, "Hello " + userField.getText());
+                            }
+                        }
+                        dd.close();
 
-              }catch (Exception rt){
-                  loginStatus.setText("Invalid user or password");
-              }
+                    } catch (Exception rt) {
+                        loginStatus.setText("Invalid user or password");
+                    }
+                }
             }
         }catch (Exception e){
             loginStatus.setText("Connection error !!");
@@ -142,34 +139,15 @@ public class security {
         stage.show();
     }
 
-    private void checkLogin(ActionEvent event,String AN){
+    private boolean checkLogin(){
         try {
             File f=new File("C:\\Users\\Public\\Active.txt");
             File f1=new File("C:\\license.txt");
-            Scanner s=new Scanner(f);
-            Scanner s1=new Scanner(f1);
-            String k=s.nextLine();
-            String activeYoussef=s1.nextLine();
-            String activeMousa=s1.nextLine();
-            String activeMoataz=s1.nextLine();
-
-
-
-            if(k.equals(activeYoussef)){
-                JOptionPane.showMessageDialog(null,"Welcome admin Youssef with user : "+AN);
-                mainCeaser(event);
-            }else if(k.equals(activeMousa)){
-                JOptionPane.showMessageDialog(null,"Welcome admin Mousa with user : "+AN);
-                mainCeaser(event);
-            }else if(k.equals(activeMoataz)){
-                JOptionPane.showMessageDialog(null,"Welcome admin Moataz with user : "+AN);
-                mainCeaser(event);
-            }else {
-                loginStatus.setText("!!! You are not admin !!!");
-            }
+            return f.exists() && f1.exists();
 
         }catch (Exception e){
-            loginStatus.setText("Error accrued ,You are not admin !!");
+            loginStatus.setText("Error, You are not an admin !!");
+            return false;
         }
     }
 

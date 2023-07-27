@@ -1,0 +1,22 @@
+{
+    "java.configuration.runtimes": [
+
+        {
+            "name": "JavaSE-18",
+            "path": "C:\\Program Files\\Java\\jdk-18.0.2",
+            "default": true
+        }
+    ],
+    "java.project.referencedLibraries": [
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.base.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.controls.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.fxml.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.graphics.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.media.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.swing.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx.web.jar",
+        "e:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib\\javafx-swt.jar",
+        "e:\\programming\\java\\SDKs&Other\\jfoenix-19.0.1.jar"
+    ],
+    "java.configuration.vmArgs": "--module-path E:\\programming\\java\\SDKs&Other\\javafx-sdk-19\\lib --add-modules javafx.controls,javafx.fxml"
+}
